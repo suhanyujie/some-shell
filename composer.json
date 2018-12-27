@@ -1,0 +1,14 @@
+{
+  "name": "suhanyu/some-shell",
+  "description": "一些本地工具shell/php/python脚本等",
+  "license": "Apache Licence",
+  "authors": [
+    {
+      "name": "suhanyujie",
+      "email": "suhanyujie@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2"
+  }
+}
