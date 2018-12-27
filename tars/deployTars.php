@@ -11,6 +11,11 @@ $configArr = parse_ini_file(dirname(dirname(__FILE__)).'/.env.ini');
 $objName = $configArr['objName'] ?? '';
 //本地的配置仓库
 $configRegistry = $configArr['configRegistry'] ?? '';
+//拉取配置仓库中的最新代码
+$objConfDir = "$configRegistry";
+exec("cd {$objConfDir};/www/common/someShell/pullOrigin.sh;");
+echo "----------------------------------------\n";
+echo "更新配置仓库的配置 完成！\n";
 if (empty($configRegistry) || empty($objName)) {
     throw new \Exception("请在配置文件中配置configRegistry/objName选项！", 17);
 }
