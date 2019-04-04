@@ -22,3 +22,6 @@ echo "例如 sudo yum install -y docker-ce-17.12.1.ce-1.el7.centos \n"
 echo "启动docker命令： sudo systemctl start docker \n"
 
 echo "验证docker是正确安装： sudo docker run hello-world \n"
+
+
+# 参考资料  https://docs.docker-cn.com/engine/installation/linux/docker-ce/centos/#%E4%BD%BF%E7%94%A8%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85
