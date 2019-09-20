@@ -1,0 +1,22 @@
+version: '3'
+services:
+    nginx:
+        container_name: service_nginx_1
+        image: nginx
+        depends_on:
+            - php56
+        restart: always
+        volumes:
+            - /d/workCode/personal/some-shell/src/docker/php56/nginx/site.conf:/etc/nginx/conf.d/site.conf
+            - /d/workCode/other/leadepumps:/opt/wwwroot/web/leadepumps
+        ports:
+            - "8080:80"
+            - "8020:8020"
+    php56:
+        container_name: service_php56_1
+        build: ./php56
+        restart: always
+        volumes:
+            - /d/workCode/other/leadepumps:/opt/wwwroot/web/leadepumps
+        environment:
+            APP_ENV: dev
