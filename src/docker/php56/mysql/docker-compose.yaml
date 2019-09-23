@@ -1,0 +1,14 @@
+version: '0.1'
+services:
+  mysql:
+    container_name: dd_mysql
+    image: mysql:5.6
+    restart: always
+    volumes:
+      - /d/workCode/other/backup:/www/backup
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    command:
+      /usr/bin/bash /xx/xx/entry_script.sh
