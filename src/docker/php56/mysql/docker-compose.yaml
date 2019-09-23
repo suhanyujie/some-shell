@@ -12,3 +12,4 @@ services:
       MYSQL_ROOT_PASSWORD: 123456
     command:
       /usr/bin/bash /xx/xx/entry_script.sh
+
