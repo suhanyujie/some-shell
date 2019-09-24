@@ -6,10 +6,11 @@ services:
     restart: always
     volumes:
       - /d/workCode/other/backup:/www/backup
+      - /d/workCode/personal/some-shell/src:/www/script
     ports:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: 123456
     command:
-      /usr/bin/bash /xx/xx/entry_script.sh
+      /bin/bash /www/script/docker/php56/mysql/entry_script.sh
 
