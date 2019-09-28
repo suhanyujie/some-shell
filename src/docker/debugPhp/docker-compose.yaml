@@ -1,0 +1,10 @@
+version: '0.1.0'
+services:
+    php733debug:
+        container_name: debug_php_1
+        image: php:7.3.3-cli
+        volumes:
+          - ~/www2/tech/docker/debugPhpData:/opt/wwwroot
+        security_opt:
+          - seccomp:unconfined
+        entrypoint: ['bash']
